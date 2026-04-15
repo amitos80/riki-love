@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'Figtree', system-ui, sans-serif;
+
+    --background: 0 0% 97%;
+    --foreground: 220 20% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 14%;
+
+    --primary: 209 100% 46%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 20% 14%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 10% 46%;
+
+    --accent: 220 14% 93%;
+    --accent-foreground: 220 20% 14%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 209 100% 46%;
+
+    --radius: 0.5rem;
+
+    /* monday.com status colors */
+    --status-done: 154 64% 46%;
+    --status-working: 36 100% 57%;
+    --status-stuck: 0 72% 51%;
+    --status-info: 209 100% 46%;
+    --status-purple: 266 65% 57%;
+
+    /* Surfaces */
+    --surface-primary: 0 0% 100%;
+    --surface-secondary: 220 14% 97.5%;
+    --surface-hover: 209 100% 97%;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 4px hsl(220 20% 14% / 0.06);
+    --shadow-md: 0 4px 16px hsl(220 20% 14% / 0.08);
+    --shadow-lg: 0 8px 32px hsl(220 20% 14% / 0.12);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 20% 14%;
+    --sidebar-primary: 209 100% 46%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 220 20% 14%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 209 100% 46%;
+  }
+
+  .dark {
+    --background: 222 30% 8%;
+    --foreground: 220 14% 92%;
+
+    --card: 222 25% 11%;
+    --card-foreground: 220 14% 92%;
+
+    --popover: 222 25% 11%;
+    --popover-foreground: 220 14% 92%;
+
+    --primary: 209 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 222 20% 16%;
+    --secondary-foreground: 220 14% 92%;
+
+    --muted: 222 20% 16%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 222 20% 18%;
+    --accent-foreground: 220 14% 92%;
+
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 20% 18%;
+    --input: 222 20% 18%;
+    --ring: 209 100% 50%;
+
+    --surface-primary: 222 25% 11%;
+    --surface-secondary: 222 30% 8%;
+    --surface-hover: 209 100% 12%;
+
+    --sidebar-background: 222 25% 10%;
+    --sidebar-foreground: 220 14% 92%;
+    --sidebar-primary: 209 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 20% 16%;
+    --sidebar-accent-foreground: 220 14% 92%;
+    --sidebar-border: 222 20% 18%;
+    --sidebar-ring: 209 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans tracking-tight;
+  }
+}
+
+@layer utilities {
+  .shadow-card {
+    box-shadow: var(--shadow-sm);
+  }
+  .shadow-card-hover {
+    box-shadow: var(--shadow-md);
+  }
+  .shadow-elevated {
+    box-shadow: var(--shadow-lg);
+  }
+}
